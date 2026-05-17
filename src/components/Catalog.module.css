@@ -1,0 +1,144 @@
+.section {
+  background: var(--dark2);
+  padding: 100px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  overflow: hidden;
+  transition: border-color 0.3s;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.card:hover {
+  border-color: var(--accent);
+}
+.card:hover .cardGlow { opacity: 1; }
+
+.cardInner {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots { display: flex; gap: 6px; }
+.dots span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+
+.tag {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  padding: 3px 10px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.iconArea {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.cube {
+  width: 70px; height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(var(--accent), 0.3);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+.cubeIcon {
+  font-size: 2.2rem;
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.cardTitle {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: rgba(200, 216, 232, 0.6);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.cardBtn {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  transition: letter-spacing 0.3s;
+}
+.cardBtn:hover { letter-spacing: 0.12em; }
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%, rgba(0, 255, 136, 0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.note {
+  text-align: center;
+  margin-top: 50px;
+  color: rgba(200, 216, 232, 0.5);
+  font-size: 0.95rem;
+}
+.note a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+  transition: border-color 0.2s;
+}
+.note a:hover { border-color: var(--green); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 0 24px; }
+  .section { padding: 70px 0; }
+}

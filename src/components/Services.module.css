@@ -1,0 +1,71 @@
+.section {
+  padding: 100px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  background: var(--card);
+  border-radius: 8px;
+  padding: 36px 28px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover { transform: translateY(-6px); }
+.card:hover::before { opacity: 1; }
+
+.green { border: 1px solid rgba(0, 255, 136, 0.12); }
+.blue  { border: 1px solid rgba(0, 170, 255, 0.12); }
+
+.green:hover { box-shadow: 0 8px 40px rgba(0, 255, 136, 0.15); }
+.blue:hover  { box-shadow: 0 8px 40px rgba(0, 170, 255, 0.15); }
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.cardTitle {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: white;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: rgba(200, 216, 232, 0.65);
+  line-height: 1.7;
+}
+
+.cardGlow {
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 70px 24px; }
+}

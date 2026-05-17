@@ -1,0 +1,76 @@
+.footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(0, 255, 136, 0.08);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 60px 30px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.brand p {
+  font-size: 0.9rem;
+  color: rgba(200, 216, 232, 0.4);
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+.logo {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: white;
+}
+.logo em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.nav strong {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: rgba(0, 255, 136, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.nav a {
+  color: rgba(200, 216, 232, 0.5);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.nav a:hover { color: var(--green); }
+
+.line {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 255, 136, 0.15), rgba(0, 170, 255, 0.15), transparent);
+  margin-bottom: 24px;
+}
+
+.bottom p {
+  font-size: 0.82rem;
+  color: rgba(200, 216, 232, 0.25);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 50px 24px 24px; }
+  .top { grid-template-columns: 1fr; gap: 32px; }
+}
