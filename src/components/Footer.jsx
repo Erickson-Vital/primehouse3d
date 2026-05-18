@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
           <div className={styles.nav}>
             <strong>Contato</strong>
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="https://wa.me/5519992368835" target="_blank" rel="noreferrer">WhatsApp</a>
             <a href="mailto:contato@primehouse3d.com">E-mail</a>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function Contact() {
     const msg = encodeURIComponent(
       `Olá! Meu nome é ${data.get('name')}.\n\nProjeto: ${data.get('project')}\n\nDetalhes: ${data.get('message')}`
     )
-    window.open(`https://wa.me/5511999999999?text=${msg}`, '_blank')
+    window.open(`https://wa.me/5519992368835?text=${msg}`, '_blank')
     setSent(true)
     setTimeout(() => setSent(false), 3000)
   }
@@ -44,11 +44,11 @@ export default function Contact() {
             </p>
 
             <div className={styles.contacts}>
-              <a href="https://wa.me/5511999999999" target="_blank" rel="noreferrer" className={styles.contactItem}>
+              <a href="https://wa.me/5519992368835" target="_blank" rel="noreferrer" className={styles.contactItem}>
                 <span className={styles.contactIcon}>📱</span>
                 <div>
                   <div className={styles.contactLabel}>WhatsApp</div>
-                  <div className={styles.contactVal}>(11) 99999-9999</div>
+                  <div className={styles.contactVal}>(19) 99236-8835</div>
                 </div>
               </a>
               <a href="mailto:contato@primehouse3d.com" className={styles.contactItem}>
